@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weekly Timesheet Report</title>
+  <style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 10px;
+        border: 1px solid #dddddd;
+        text-align: left;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    h2, p {
+        font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+<h2>Hello, {{employeeId}}!</h2>
+<p>Here are your daily total hours worked for the week starting {{startDate}} and ending {{endDate}}:</p>
+
+<table>
+  <thead>
+  <tr>
+    <th>Date</th>
+    <th>Normal Hours Worked</th>
+    <th>Extra Hours Worked</th>
+    <th>Total Hours Worked</th>
+    <th>Client Name</th>
+    <th>Project Name</th>
+    <th>Task Type</th>
+    <th>Task Description</th>
+    <th>Work Location</th>
+  </tr>
+  </thead>
+  <tbody>
+  {{tableRows}}
+  </tbody>
+</table>
+
+<p><strong>Total Hours Worked in the Week:</strong> {{totalHoursWorked}}</p>
+<p>Best regards,<br>The Timesheet Management Team</p>
+</body>
+</html>
